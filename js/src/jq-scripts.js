@@ -79,7 +79,7 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: address,
         map: map,
-        icon: 'favicon.png',
+        icon: '././img/marker.png',
         animation: google.maps.Animation.DROP
     });
 }
