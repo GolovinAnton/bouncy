@@ -79,7 +79,8 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: address,
         map: map,
-        icon: url: 'img/marker.png'
+        icon: 'img/marker.png',
+        animation: google.maps.Animation.DROP
     });
 }
         
