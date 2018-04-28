@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.team__slider').slick({
+    $('.slider').slick({
         autoplay: true,
         infinite: true,
         arrows: false,
@@ -7,11 +7,10 @@ $(document).ready(function() {
         speed: 1000
     });
 
-    $('.testimonials-slider').slick({
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        speed: 3000
+
+    // nav burger 
+    $('.burger').click(function() {
+        $('.burger__line').toggleClass('fade');
     });
 
     //layout isotop
@@ -25,14 +24,20 @@ $(document).ready(function() {
 
     //isotop 
 
-    $("body").on("click", ".filters li", function(e) {
+    $('body').on('click', '.filters li', function(e) {
         e.preventDefault();
-        $(".filters li").removeClass("active");
+        $('.filters li').removeClass('active');
         $(this).addClass("active");
-        var filter = $(this).attr("data-filter");
+        var filter = $(this).attr('data-filter');
         filter = filter == '*' ? filter : '.' + filter;
         $isotop.isotope({ filter: filter });
     });
+
+    $('body').on('click', '.burger', function(e) {
+        e.preventDefault();
+        $('body').toggleClass('nav-opened');
+    });
+
 
     //"scroll to" function on click
 
@@ -52,29 +57,29 @@ $(document).ready(function() {
     });
 })
 
-// scroll event
+// scroll event fixed menu
 
 function scrollEvent() {
-                var $getEvent = $('.header__nav');
-                if ($(window).scrollTop() < 100) {
-                    $('.header__nav').removeClass('fixed');
-                } else {
-                  $('.header__nav').addClass('fixed');
-                }
-            
-                }
-                $(window).scroll(scrollEvent);
-                scrollEvent();
+    var $getEvent = $('.header__nav');
+    if ($(window).scrollTop() < 100) {
+        $('.header__nav').removeClass('fixed');
+    } else {
+        $('.header__nav').addClass('fixed');
+    }
 
+}
+$(window).scroll(scrollEvent);
+scrollEvent();
 
+//map
 
 function initMap() {
-    
-    var address = {lat: 47.096779, lng: 37.539277},
-        map = new google.maps.Map(document.getElementById('map'),{
-        zoom: 18,
-        center: address
-    });
+
+    var address = { lat: 47.096779, lng: 37.539277 },
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: address
+        });
 
     var marker = new google.maps.Marker({
         position: address,
@@ -83,4 +88,3 @@ function initMap() {
         animation: google.maps.Animation.DROP
     });
 }
-        

@@ -5,38 +5,45 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bouncy</title>
     <link rel="shortcut icon" href="favicon.png">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="scss/slick.scss">
 </head>
 
 <body>
     <!-- header begin -->
     <header class="header" id="bouncy" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(img/header_bg.jpg);">
         <!-- .header__nav added .fixed in js -->
-        <div class="header__nav">
-            <div class="header__logo" href="#bouncy">
-                <a href=""><img class="logo" src="img/hader_logo.png" alt=""></a>
-            </div>
-            <ul class="items">
-                <li class="item">
-                    <a class="scrollTo scrollTo__active" href="#bouncy">Hello</a>
-                </li>
-                <li class="item">
-                    <a class="scrollTo" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="item">
-                    <a class="scrollTo" href="#team">Team</a>
-                </li>
-                <li class="item">
-                    <a class="scrollTo" href="#contact">Contact</a>
-                </li>
-            </ul>
+        <div class="container">
+            <nav class="header__nav">
+                <div class="burger">
+                    <div class="burger__line"></div>
+                </div>
+                <ul class="items">
+                    <li class="item__logo">
+                        <a href="#bouncy" class="scrollTo"><img class="logo" src="img/hader_logo.png" alt=""></a>
+                    </li>
+                    <li class="item">
+                        <a class="scrollTo" href="#bouncy">Hello</a>
+                    </li>
+                    <li class="item">
+                        <a class="scrollTo" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="item">
+                        <a class="scrollTo" href="#team">Team</a>
+                    </li>
+                    <li class="item">
+                        <a class="scrollTo" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="header__title">We Are Code Cafe</h1>
+            <h2 class="header__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h2>
+            <a class="header__button scrollTo" href="#portfolio"><img src="img/array.png" alt=""></a>
         </div>
-        <h1 class="header__title">We Are Code Cafe</h1>
-        <h2 class="header__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h2>
-        <div class="header__button scrollTo" href="#portfolio"><img src="img/array.png" alt=""></div>
     </header>
     <!-- end of header -->
     <!-- begin portfolio section -->
@@ -117,7 +124,7 @@
                 </div>
                 <div class="image print">
                     <img src="img/img10.jpg" alt="" class="image__picture">
-                    <div class="image__overlay">
+                    <div  class="image__overlay">
                         <div class="image__title">branding
                             <br><i class="far fa-registered"></i></div>
                     </div>
@@ -142,52 +149,54 @@
     <!-- end of portfolio section -->
     <!-- begin section team -->
     <section class="team" id="team">
-        <h2 class="team__title">the team</h2>
-        <p class="team__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-        <div class="team__slider">
-            <div class="team__content">               
+        <div class="container">
+            <h2 class="team__title">the team</h2>
+            <p class="team__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <div class="slider">
+                <div class="team__content">               
+                        <div class="team__content team__content--wrap">
+                            <img src="img/abdullahh.jpg" alt="" class="team__image">
+                            <div class="team__overlay">
+                                <a href="#"><img src="img/tw2.png" alt=""></a>
+                                <a href="#"><img src="img/fb2.png" alt=""></a>
+                                <a href="#"><img src="img/inst2.png" alt=""></a>
+                            </div>
+                        </div>
+                    <div class="team__about">
+                        <h3 class="team__about team__about--title">Abdullah Noman</h3>
+                        <div class="team__about team__about--subtitle">Creative Director, Code Cafe</div>
+                        <p class="team__about team__about--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
+                    </div>
+                </div>
+                <div class="team__content">
                     <div class="team__content team__content--wrap">
-                        <img src="img/abdullahh.jpg" alt="" class="team__image">
-                        <div class="team__overlay">
-                            <a href="#"><img src="img/tw2.png" alt=""></a>
-                            <a href="#"><img src="img/fb2.png" alt=""></a>
-                            <a href="#"><img src="img/inst2.png" alt=""></a>
+                            <img src="img/abdullahh.jpg" alt="" class="team__image">
+                            <div class="team__overlay">
+                                <a href="#"><img src="img/tw2.png" alt=""></a>
+                                <a href="#"><img src="img/fb2.png" alt=""></a>
+                                <a href="#"><img src="img/inst2.png" alt=""></a>
+                            </div>
                         </div>
+                    <div class="team__about">
+                        <h3 class="team__about team__about--title">Abdullah Noman</h3>
+                        <div class="team__about team__about--subtitle">Creative Director, Code Cafe</div>
+                        <p class="team__about team__about--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
                     </div>
-                <div class="team__about">
-                    <h3 class="team__about team__about--title">Abdullah Noman</h3>
-                    <div class="team__about team__about--subtitle">Creative Director, Code Cafe</div>
-                    <p class="team__about team__about--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
                 </div>
-            </div>
-            <div class="team__content">
-                <div class="team__content team__content--wrap">
-                        <img src="img/abdullahh.jpg" alt="" class="team__image">
-                        <div class="team__overlay">
-                            <a href="#"><img src="img/tw2.png" alt=""></a>
-                            <a href="#"><img src="img/fb2.png" alt=""></a>
-                            <a href="#"><img src="img/inst2.png" alt=""></a>
+                <div class="team__content">
+                    <div class="team__content team__content--wrap">
+                            <img src="img/abdullahh.jpg" alt="" class="team__image">
+                            <div class="team__overlay">
+                                <a href="#"><img src="img/tw2.png" alt=""></a>
+                                <a href="#"><img src="img/fb2.png" alt=""></a>
+                                <a href="#"><img src="img/inst2.png" alt=""></a>
+                            </div>
                         </div>
+                    <div class="team__about">
+                        <h3 class="team__about team__about--title">Abdullah Noman</h3>
+                        <div class="team__about team__about--subtitle">Creative Director, Code Cafe</div>
+                        <p class="team__about team__about--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
                     </div>
-                <div class="team__about">
-                    <h3 class="team__about team__about--title">Abdullah Noman</h3>
-                    <div class="team__about team__about--subtitle">Creative Director, Code Cafe</div>
-                    <p class="team__about team__about--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
-                </div>
-            </div>
-            <div class="team__content">
-                <div class="team__content team__content--wrap">
-                        <img src="img/abdullahh.jpg" alt="" class="team__image">
-                        <div class="team__overlay">
-                            <a href="#"><img src="img/tw2.png" alt=""></a>
-                            <a href="#"><img src="img/fb2.png" alt=""></a>
-                            <a href="#"><img src="img/inst2.png" alt=""></a>
-                        </div>
-                    </div>
-                <div class="team__about">
-                    <h3 class="team__about team__about--title">Abdullah Noman</h3>
-                    <div class="team__about team__about--subtitle">Creative Director, Code Cafe</div>
-                    <p class="team__about team__about--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
                 </div>
             </div>
         </div>
@@ -196,14 +205,14 @@
     <!-- begin of "call to action section" -->
     <section class="contacts" style="background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/contact_us.jpg);">
         <div class="contacts__text">Already Loved Us? Let’s talk!</div>
-        <a class="contacts__btn scrollTo" href="#contact">Contact Us</a>
+        <a class="contacts__btn scrollTo" id="send">Contact Us</a>
     </section>
     <!-- end of "call to action section" -->
     <!-- begin of etstimonials section -->
     <section class="testimonials">
         <h2 class="testimonials__title">testimonials</h2>
         <p class="testimonials__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-        <div class="testimonials-slider">
+        <div class="slider">
             <div class="testimonials__content">
                 <div class="testimonials__content testimonials__content--image"><img src="img/partho.jpg" alt=""></div>
                 <div class="testimonials__content testimonials__content--text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
@@ -268,11 +277,12 @@
     </footer>
     <!-- end of footer -->
     <script src="js/scripts.js"></script>
-    <!-- <script src="js/lib/jquery-3.3.1.js"></script> -->
+    <script src="js/lib/jquery-3.3.1.js"></script>
     <script src="js/lib/slick.min.js"></script>
     <script src="js/lib/isotope.pkgd.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUDkrBVqhLy1mrJNMALiyn60lljKp8UKQ&callback=initMap">
     </script>
+   
 </body>
 
 </html>
