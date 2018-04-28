@@ -264,7 +264,7 @@ a {
         &--wrap {
             position: relative;
             width: 285px;
-            height: 364px; // margin-left: 170px;
+            height: 364px;
             font-size: 0;
             cursor: pointer;
             z-index: 200;
@@ -315,7 +315,6 @@ a {
         }
         &--text {
             max-width: 440px;
-            max-height: auto;
             line-height: 25px;
             text-align: right;
         }
@@ -628,7 +627,8 @@ a {
     &--text {
         overflow: hidden;
         text-overflow: ellipsis;
-        max-height: 60px;
+        max-height: 200px;
+
     }
 }
 
